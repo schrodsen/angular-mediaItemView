@@ -1,3 +1,27 @@
+<h1 class="test">Upload Files</h1>
+
+<button class="uploadBox" (click)="addFiles()">
+  <i class="fa-thin fa-file-plus fa-4x"></i>
+</button>
+
 <div class="container">
-  Hi {{ mediaItem.Label }}
+  <button mat-raised-button color="primary" (click)="addFiles()">
+    <i class="fa-thin fa-file-plus"></i>Add Files
+  </button>
 </div>
+
+<div class="container-fluid">
+  <img
+    *ngFor="let item of uploadFiles"
+    src="{{ item.preview }}"
+    class="img-thumbnail m-2"
+    style="width:120px; height:120px"
+  />
+</div>
+
+<input
+  type="file"
+  #file
+  (change)="onChange(file.files)"
+  multiple
+/>

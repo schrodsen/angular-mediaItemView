@@ -1,0 +1,20 @@
+<div class="container" appDnd (fileDropped)="onFileDropped($event)">
+  <button class="uploadBox" (click)="addFiles()">
+    <i class="fa-thin fa-file-plus fa-4x"></i>
+  </button>
+
+  <button mat-raised-button color="primary" (click)="addFiles()">
+    Datei hinzufügen
+  </button>
+</div>
+
+<input type="file" #fileInput (change)="onChange(fileInput.files)" multiple />
+
+<div class="container-fluid">
+  <img
+    *ngFor="let item of uploadFiles"
+    src="{{ item.preview }}"
+    class="img-thumbnail m-2"
+    style="width:120px; height:120px"
+  />
+</div>

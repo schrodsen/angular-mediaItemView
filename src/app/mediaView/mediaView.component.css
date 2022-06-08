@@ -1,0 +1,19 @@
+.test {
+  color: brown;
+}
+
+.imageBox {
+  width: 120px;
+  height: 120px;
+  border: 1px solid green;
+  background-color: gray;
+}
+
+.uploadBox {
+  border: 3px solid green;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
